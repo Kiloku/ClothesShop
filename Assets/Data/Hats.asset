@@ -1,0 +1,21 @@
+%YAML 1.1
+%TAG !u! tag:unity3d.com,2011:
+--- !u!114 &11400000
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 0}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 8b4c3692fc2809f41bed0c75b8655e40, type: 3}
+  m_Name: Hats
+  m_EditorClassIdentifier: 
+  Clothes:
+  - Name: TopHat
+    Sprite: {fileID: 21300000, guid: 0e69534f052a40d489ec244d0a9e3b16, type: 3}
+    offset: {x: 0, y: 0}
+  - Name: Tiara
+    Sprite: {fileID: 21300000, guid: 44e3a5c14d9497c4180ccca4a8dd748f, type: 3}
+    offset: {x: 0, y: 0}
