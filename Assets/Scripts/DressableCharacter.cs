@@ -6,7 +6,8 @@ public class DressableCharacter : MonoBehaviour
 {
     public Sprite characterBase;
 
-    public ClothingSlot hat;
+    public ClothingSlot Hat;
+    public ClothingSlot Shirt;
     
     void Start()
     {
@@ -17,8 +18,11 @@ public class DressableCharacter : MonoBehaviour
     {
         if (Input.GetKeyDown(KeyCode.X))
         {
-            hat.CurrentSelectedIndex = 1;
-            hat.SetSprite();
+            Hat.NextClothes();
+        }
+        if (Input.GetKeyDown(KeyCode.Z))
+        {
+            Shirt.NextClothes();
         }
     }
 }
