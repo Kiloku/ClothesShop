@@ -103,7 +103,7 @@ public class SpriteAnimator : MonoBehaviour
 
     public void SetFrame(int frame)
     {
-        if (currentAnimation == null) return;
+        if (currentAnimation == null || currentAnimation.frames.Length <= 0) return;
         if (frame >= currentAnimation.frames.Length) frame = 0;
         CurrentFrame = frame;
         spriteRenderer.sprite = currentAnimation.frames[CurrentFrame];
@@ -131,6 +131,7 @@ public class SpriteAnimator : MonoBehaviour
     {
         SetAnimation(currentAnimation.name);
         SetFrame(CurrentFrame);
-        spriteRenderer.sprite = currentAnimation.frames[CurrentFrame];
+        if (!currentAnimation.invisible)
+            spriteRenderer.sprite = currentAnimation.frames[CurrentFrame];
     }
 }

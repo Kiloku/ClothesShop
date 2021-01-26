@@ -7,6 +7,7 @@ public class CustomizableCharacter : MonoBehaviour
     public SpriteRenderer SpriteRenderer;
     
     public SpritePiece Hat;
+    public SpritePiece Pants;
     public SpritePiece Shirt;
 
     void Start()
@@ -18,11 +19,15 @@ public class CustomizableCharacter : MonoBehaviour
     {
         if (Input.GetKeyDown(KeyCode.X))
         {
-            Hat.NextClothes();
+            Pants.NextClothes();
         }
         if (Input.GetKeyDown(KeyCode.Z))
         {
             Shirt.NextClothes();
+        }
+        if (Input.GetKeyDown(KeyCode.C))
+        {
+            Hat.NextClothes();
         }
     }
 }
