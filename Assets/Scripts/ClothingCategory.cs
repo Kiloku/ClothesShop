@@ -16,9 +16,12 @@ public class ClothingObject
     public string Name;
     public Sprite Sprite;
     public Vector2 offset = Vector2.down;
+    public int LayerOffset;
 
     public bool Colourizable; //Determines if the *player* can change the colour.
     public Color DefaultColour = Color.white;
+    
+
 
     public static ClothingObject None = new ClothingObject() {Name = "None", Sprite = null, offset = Vector2.zero, DefaultColour = Color.white};
 }

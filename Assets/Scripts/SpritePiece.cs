@@ -4,7 +4,7 @@ using System.Collections.Generic;
 using UnityEngine;
 
 [Serializable]
-public class ClothingSlot : MonoBehaviour
+public class SpritePiece : MonoBehaviour 
 {
     //TODO: Auto-set orderInLayer
     [SerializeField]
@@ -12,7 +12,11 @@ public class ClothingSlot : MonoBehaviour
 
     private SpriteRenderer SpriteRenderer;
     
+    DressableCharacter Owner;
+    
     public int CurrentSelectedIndex = 0;
+
+    public int SlotLayerOffset = 1;
 
     private Vector2 BasePosition;
 
@@ -28,6 +32,7 @@ public class ClothingSlot : MonoBehaviour
     private void Start()
     {
         SpriteRenderer = GetComponent<SpriteRenderer>();
+        Owner = GetComponentInParent<DressableCharacter>();
         BasePosition = transform.localPosition;
         SetSprite();
     }
@@ -35,8 +40,11 @@ public class ClothingSlot : MonoBehaviour
     public void SetSprite()
     {
         SpriteRenderer.sprite = CurrentlySelected.Sprite;
-        transform.localPosition = BasePosition + CurrentlySelected.offset;
         SpriteRenderer.color = CurrentlySelected.DefaultColour;
+        SpriteRenderer.sortingOrder =
+            Owner.SpriteRenderer.sortingOrder + SlotLayerOffset + CurrentlySelected.LayerOffset;
+        
+        transform.localPosition = BasePosition + CurrentlySelected.offset;
     }
 
     public void NextClothes()

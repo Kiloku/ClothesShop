@@ -4,14 +4,14 @@ using UnityEngine;
 
 public class DressableCharacter : MonoBehaviour
 {
-    public Sprite characterBase;
-
-    public ClothingSlot Hat;
-    public ClothingSlot Shirt;
+    public SpriteRenderer SpriteRenderer;
     
+    public SpritePiece Hat;
+    public SpritePiece Shirt;
+
     void Start()
     {
-        
+        SpriteRenderer = GetComponent<SpriteRenderer>();
     }
     
     void Update()
