@@ -5,12 +5,14 @@ using UnityEngine;
 
 public class PlayerControl : MonoBehaviour
 {
-    private DressableCharacter Character;
-    public SpriteAnimator MainAnimator;
-    public SpriteAnimator EyesAnimator;
+    private CustomizableCharacter Character;
+
+    public CompositeAnimator animator;
+    
     private void Start()
     {
-        Character = GetComponent<DressableCharacter>();
+        Character = GetComponent<CustomizableCharacter>();
+        animator.CurrentAnimationName = "Down";
     }
 
     // Update is called once per frame    
@@ -24,35 +26,29 @@ public class PlayerControl : MonoBehaviour
     {
         if (Input.GetAxisRaw("Vertical") > 0.1f)
         {
-            MainAnimator.SetAnimation("Up");
-            EyesAnimator.SetAnimation("Up");
+            animator.SetAnimation("Up");
         }
         if (Input.GetAxisRaw("Vertical") < -0.1f)
         { 
-            MainAnimator.SetAnimation("Down");
-            EyesAnimator.SetAnimation("Down");
+            animator.SetAnimation("Down");
         }
         if (Input.GetAxisRaw("Horizontal") < -0.1f)
         {
-            MainAnimator.SetAnimation("Left");
-            EyesAnimator.SetAnimation("Left");
+            animator.SetAnimation("Left");
         }
         if (Input.GetAxisRaw("Horizontal") > 0.1f)
         {
-            MainAnimator.SetAnimation("Right");
-            EyesAnimator.SetAnimation("Right");
+            animator.SetAnimation("Right");
         }
 
         if (Input.GetAxisRaw("Horizontal") == 0 && Input.GetAxisRaw("Vertical") == 0)
         {
-            if(MainAnimator.playing) MainAnimator.StopAt(0);
-            if(EyesAnimator.playing) EyesAnimator.StopAt(0);
+            if(animator.playing) animator.StopAt(0);
         }
         else
         {
-            if (!MainAnimator.playing) MainAnimator.Play();
-            if (!EyesAnimator.playing) EyesAnimator.Play();
+            if (!animator.playing) animator.Play();
         }
-        
+
     }
 }

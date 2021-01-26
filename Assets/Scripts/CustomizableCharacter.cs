@@ -2,7 +2,7 @@
 using System.Collections.Generic;
 using UnityEngine;
 
-public class DressableCharacter : MonoBehaviour
+public class CustomizableCharacter : MonoBehaviour
 {
     public SpriteRenderer SpriteRenderer;
     

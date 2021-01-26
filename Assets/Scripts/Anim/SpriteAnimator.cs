@@ -17,15 +17,20 @@ public class SpriteAnimator : MonoBehaviour
         private set;
     }
 
-    public SpriteAnimator ParentAnimator;
-
     private SpriteRenderer spriteRenderer;
-    private SpriteAnimation currentAnimation;
+
+    public SpriteAnimation currentAnimation
+    {
+        get;
+        private set;
+    }
     private float secsPerFrame;
     private float nextFrameTime;
+
+    public CompositeAnimator Owner;
+    public bool partOfComposite => Owner != null;
     
-    // Start is called before the first frame update
-    void Start()
+    public void Init()
     {
         spriteRenderer = GetComponent<SpriteRenderer>();
         SetAnimation(0);
@@ -34,22 +39,16 @@ public class SpriteAnimator : MonoBehaviour
     // Update is called once per frame
     void Update()
     {
-        if (!playing || Time.time < nextFrameTime) return;
+        if (!playing || Time.time < nextFrameTime || partOfComposite) return;
         
         CurrentFrame++;
         if (CurrentFrame >= currentAnimation.frames.Length)
         {
-            if (!currentAnimation.loop)
-            {
-                playing = false;
-                return;
-            }
             CurrentFrame = 0;
         }
         SetFrame(CurrentFrame);
-        // spriteRenderer.sprite = currentAnimation.frames[CurrentFrame];
+        
         nextFrameTime += secsPerFrame;
-
     }
 
 
@@ -61,9 +60,14 @@ public class SpriteAnimator : MonoBehaviour
         nextFrameTime = Time.time;
     }
 
-    public void SetAnimation(string name)
+    public void SetAnimation(string name, bool force = false)
     {
-        if (currentAnimation.name == name) return;
+        if (!force)
+        {
+            if ((Animations == null || Animations.Count <= 0) ||
+                (currentAnimation != null && currentAnimation.name == name)) return;
+        }
+
         int index = Animations.FindIndex(anim => anim.name == name);
 
         if (index < 0)
@@ -79,6 +83,7 @@ public class SpriteAnimator : MonoBehaviour
     
     private SpriteAnimation SetAnimation(int index)
     {
+        if (Animations == null || Animations.Count <= 0) return null;
         SpriteAnimation animation = Animations[index];
         currentAnimation = animation;
         
@@ -98,6 +103,7 @@ public class SpriteAnimator : MonoBehaviour
 
     public void SetFrame(int frame)
     {
+        if (currentAnimation == null) return;
         if (frame >= currentAnimation.frames.Length) frame = 0;
         CurrentFrame = frame;
         spriteRenderer.sprite = currentAnimation.frames[CurrentFrame];
@@ -119,5 +125,12 @@ public class SpriteAnimator : MonoBehaviour
     {
         playing = true;
         nextFrameTime = Time.time + secsPerFrame;
+    }
+
+    public void Refresh()
+    {
+        SetAnimation(currentAnimation.name);
+        SetFrame(CurrentFrame);
+        spriteRenderer.sprite = currentAnimation.frames[CurrentFrame];
     }
 }

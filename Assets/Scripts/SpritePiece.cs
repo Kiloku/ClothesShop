@@ -11,8 +11,10 @@ public class SpritePiece : MonoBehaviour
     public ClothingCategory Category;
 
     private SpriteRenderer SpriteRenderer;
-    
-    DressableCharacter Owner;
+
+    private SpriteAnimator Animator;
+
+    CustomizableCharacter Owner;
     
     public int CurrentSelectedIndex = 0;
 
@@ -20,7 +22,7 @@ public class SpritePiece : MonoBehaviour
 
     private Vector2 BasePosition;
 
-    public ClothingObject CurrentlySelected
+    public ClothingObject CurrentlySelectedClothing
     {
         get
         {
@@ -32,25 +34,29 @@ public class SpritePiece : MonoBehaviour
     private void Start()
     {
         SpriteRenderer = GetComponent<SpriteRenderer>();
-        Owner = GetComponentInParent<DressableCharacter>();
+        Owner = GetComponentInParent<CustomizableCharacter>();
+        Animator = GetComponent<SpriteAnimator>();
         BasePosition = transform.localPosition;
-        SetSprite();
+        Init();
     }
 
-    public void SetSprite()
+    public void Init()
     {
-        SpriteRenderer.sprite = CurrentlySelected.Sprite;
-        SpriteRenderer.color = CurrentlySelected.DefaultColour;
+        Animator.Animations = CurrentlySelectedClothing.Animations;
+        SpriteRenderer.color = CurrentlySelectedClothing.DefaultColour;
         SpriteRenderer.sortingOrder =
-            Owner.SpriteRenderer.sortingOrder + SlotLayerOffset + CurrentlySelected.LayerOffset;
+            Owner.SpriteRenderer.sortingOrder + SlotLayerOffset + CurrentlySelectedClothing.LayerOffset;
         
-        transform.localPosition = BasePosition + CurrentlySelected.offset;
+        transform.localPosition = BasePosition + CurrentlySelectedClothing.offset;
+        
     }
 
     public void NextClothes()
     {
-        CurrentSelectedIndex = CurrentSelectedIndex >= Category.Clothes.Count - 1 ? -1 : CurrentSelectedIndex + 1;
-        SetSprite();
+        CurrentSelectedIndex = CurrentSelectedIndex >= Category.Clothes.Count - 1 ? 0 : CurrentSelectedIndex + 1;
+        Init();
+        Animator.Owner.Refresh();
+        Animator.Refresh();
     }
     
     

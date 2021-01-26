@@ -14,7 +14,7 @@ public class ClothingCategory : ScriptableObject
 public class ClothingObject
 {
     public string Name;
-    public Sprite Sprite;
+    public List<SpriteAnimation> Animations;
     public Vector2 offset = Vector2.down;
     public int LayerOffset;
 
@@ -23,5 +23,5 @@ public class ClothingObject
     
 
 
-    public static ClothingObject None = new ClothingObject() {Name = "None", Sprite = null, offset = Vector2.zero, DefaultColour = Color.white};
+    public static ClothingObject None = new ClothingObject() {Name = "None", Animations = null, offset = Vector2.zero, DefaultColour = Color.white};
 }
