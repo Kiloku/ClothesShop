@@ -14,17 +14,86 @@ MonoBehaviour:
   m_EditorClassIdentifier: 
   Clothes:
   - Name: Shirt
-    Sprite: {fileID: 21300000, guid: 559f5abfd77ec9746bac6dcdaf85c7eb, type: 3}
+    Animations:
+    - name: Down
+      frames:
+      - {fileID: -404233527021637160, guid: 60ee79d5d18e5024aa3e2b79a5e6a0cb, type: 3}
+      - {fileID: 1806791935197922088, guid: 60ee79d5d18e5024aa3e2b79a5e6a0cb, type: 3}
+      - {fileID: 8047906398155918458, guid: 60ee79d5d18e5024aa3e2b79a5e6a0cb, type: 3}
+      - {fileID: -3436615011702692730, guid: 60ee79d5d18e5024aa3e2b79a5e6a0cb, type: 3}
+      framesPerSecond: 0
+      loop: 0
+      invisible: 0
+    - name: Up
+      frames:
+      - {fileID: -2469324318384546906, guid: 60ee79d5d18e5024aa3e2b79a5e6a0cb, type: 3}
+      - {fileID: 5274846995917361883, guid: 60ee79d5d18e5024aa3e2b79a5e6a0cb, type: 3}
+      - {fileID: -7800571094875385335, guid: 60ee79d5d18e5024aa3e2b79a5e6a0cb, type: 3}
+      - {fileID: -2548669082445890528, guid: 60ee79d5d18e5024aa3e2b79a5e6a0cb, type: 3}
+      framesPerSecond: 0
+      loop: 0
+      invisible: 0
+    - name: Left
+      frames:
+      - {fileID: 7189489332659260558, guid: 60ee79d5d18e5024aa3e2b79a5e6a0cb, type: 3}
+      - {fileID: 4799042706658377387, guid: 60ee79d5d18e5024aa3e2b79a5e6a0cb, type: 3}
+      - {fileID: -393499410034593481, guid: 60ee79d5d18e5024aa3e2b79a5e6a0cb, type: 3}
+      - {fileID: 6374031830624620914, guid: 60ee79d5d18e5024aa3e2b79a5e6a0cb, type: 3}
+      framesPerSecond: 0
+      loop: 0
+      invisible: 0
+    - name: Right
+      frames:
+      - {fileID: -5475571294755997379, guid: 60ee79d5d18e5024aa3e2b79a5e6a0cb, type: 3}
+      - {fileID: -5684645121923668665, guid: 60ee79d5d18e5024aa3e2b79a5e6a0cb, type: 3}
+      - {fileID: -2218564445093544733, guid: 60ee79d5d18e5024aa3e2b79a5e6a0cb, type: 3}
+      - {fileID: -2445125464814193589, guid: 60ee79d5d18e5024aa3e2b79a5e6a0cb, type: 3}
+      framesPerSecond: 0
+      loop: 0
+      invisible: 0
     offset: {x: 0, y: 0}
+    LayerOffset: 0
     Colourizable: 0
     DefaultColour: {r: 1, g: 1, b: 1, a: 1}
-  - Name: Sundress
-    Sprite: {fileID: 21300000, guid: ca5595e124bd0c547a7b86c5033893fa, type: 3}
+  - Name: ButtonShirt
+    Animations:
+    - name: Down
+      frames:
+      - {fileID: -7762960480941476576, guid: 718904d9da04f844eb37f38272177bc3, type: 3}
+      - {fileID: -4498596314218773040, guid: 718904d9da04f844eb37f38272177bc3, type: 3}
+      - {fileID: 5334225735120068375, guid: 718904d9da04f844eb37f38272177bc3, type: 3}
+      - {fileID: 3073518897190299745, guid: 718904d9da04f844eb37f38272177bc3, type: 3}
+      framesPerSecond: 0
+      loop: 0
+      invisible: 0
+    - name: Up
+      frames:
+      - {fileID: -2445998574214200675, guid: 718904d9da04f844eb37f38272177bc3, type: 3}
+      - {fileID: 1243674253968480291, guid: 718904d9da04f844eb37f38272177bc3, type: 3}
+      - {fileID: -4002796940006651550, guid: 718904d9da04f844eb37f38272177bc3, type: 3}
+      - {fileID: -7697854726066174354, guid: 718904d9da04f844eb37f38272177bc3, type: 3}
+      framesPerSecond: 0
+      loop: 0
+      invisible: 0
+    - name: Left
+      frames:
+      - {fileID: 4121536046214774948, guid: 718904d9da04f844eb37f38272177bc3, type: 3}
+      - {fileID: 7638755832391769544, guid: 718904d9da04f844eb37f38272177bc3, type: 3}
+      - {fileID: -708467982995169758, guid: 718904d9da04f844eb37f38272177bc3, type: 3}
+      - {fileID: -5854766533147921, guid: 718904d9da04f844eb37f38272177bc3, type: 3}
+      framesPerSecond: 0
+      loop: 0
+      invisible: 0
+    - name: Right
+      frames:
+      - {fileID: 2847113131246899580, guid: 718904d9da04f844eb37f38272177bc3, type: 3}
+      - {fileID: -8043062882756917370, guid: 718904d9da04f844eb37f38272177bc3, type: 3}
+      - {fileID: -8879451029262357284, guid: 718904d9da04f844eb37f38272177bc3, type: 3}
+      - {fileID: 802025181384678853, guid: 718904d9da04f844eb37f38272177bc3, type: 3}
+      framesPerSecond: 0
+      loop: 0
+      invisible: 0
     offset: {x: 0, y: 0}
+    LayerOffset: 0
     Colourizable: 0
     DefaultColour: {r: 1, g: 1, b: 1, a: 1}
-  - Name: PinkSundress
-    Sprite: {fileID: 21300000, guid: ca5595e124bd0c547a7b86c5033893fa, type: 3}
-    offset: {x: 0, y: 0}
-    Colourizable: 0
-    DefaultColour: {r: 1, g: 0.4764151, b: 0.8790624, a: 1}
