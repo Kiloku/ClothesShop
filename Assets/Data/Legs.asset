@@ -1,0 +1,99 @@
+%YAML 1.1
+%TAG !u! tag:unity3d.com,2011:
+--- !u!114 &11400000
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 0}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 8b4c3692fc2809f41bed0c75b8655e40, type: 3}
+  m_Name: Legs
+  m_EditorClassIdentifier: 
+  Clothes:
+  - Name: Pants
+    Animations:
+    - name: Down
+      frames:
+      - {fileID: 3102973179360859532, guid: d477b7880d765c748aa3b38491d03ed2, type: 3}
+      - {fileID: 3154151221306193730, guid: d477b7880d765c748aa3b38491d03ed2, type: 3}
+      - {fileID: 5388623656368484778, guid: d477b7880d765c748aa3b38491d03ed2, type: 3}
+      - {fileID: 4360012886275386904, guid: d477b7880d765c748aa3b38491d03ed2, type: 3}
+      framesPerSecond: 0
+      loop: 0
+      invisible: 0
+    - name: Up
+      frames:
+      - {fileID: 2051714079108114969, guid: d477b7880d765c748aa3b38491d03ed2, type: 3}
+      - {fileID: 121464009653243268, guid: d477b7880d765c748aa3b38491d03ed2, type: 3}
+      - {fileID: -2539548424022035405, guid: d477b7880d765c748aa3b38491d03ed2, type: 3}
+      - {fileID: 4783670432834795751, guid: d477b7880d765c748aa3b38491d03ed2, type: 3}
+      framesPerSecond: 0
+      loop: 0
+      invisible: 0
+    - name: Left
+      frames:
+      - {fileID: -1965109144725101657, guid: d477b7880d765c748aa3b38491d03ed2, type: 3}
+      - {fileID: 6122660487117938458, guid: d477b7880d765c748aa3b38491d03ed2, type: 3}
+      - {fileID: -7018075312513742668, guid: d477b7880d765c748aa3b38491d03ed2, type: 3}
+      - {fileID: -1063582254919502226, guid: d477b7880d765c748aa3b38491d03ed2, type: 3}
+      framesPerSecond: 0
+      loop: 0
+      invisible: 0
+    - name: Right
+      frames:
+      - {fileID: -9073602487700243749, guid: d477b7880d765c748aa3b38491d03ed2, type: 3}
+      - {fileID: -1437002485045820652, guid: d477b7880d765c748aa3b38491d03ed2, type: 3}
+      - {fileID: 1082445444316355987, guid: d477b7880d765c748aa3b38491d03ed2, type: 3}
+      - {fileID: -109546210617373856, guid: d477b7880d765c748aa3b38491d03ed2, type: 3}
+      framesPerSecond: 0
+      loop: 0
+      invisible: 0
+    offset: {x: 0, y: 0}
+    LayerOffset: 0
+    Colourizable: 0
+    DefaultColour: {r: 1, g: 1, b: 1, a: 1}
+  - Name: Skirt
+    Animations:
+    - name: Down
+      frames:
+      - {fileID: 1530105913813767182, guid: da4bcb16d034a094fad2df31ec01debf, type: 3}
+      - {fileID: 7256071999314105720, guid: da4bcb16d034a094fad2df31ec01debf, type: 3}
+      - {fileID: -8469676894809104085, guid: da4bcb16d034a094fad2df31ec01debf, type: 3}
+      - {fileID: 5603858264963872252, guid: da4bcb16d034a094fad2df31ec01debf, type: 3}
+      framesPerSecond: 0
+      loop: 0
+      invisible: 0
+    - name: Up
+      frames:
+      - {fileID: -5866049222044528382, guid: da4bcb16d034a094fad2df31ec01debf, type: 3}
+      - {fileID: -9017052893999074633, guid: da4bcb16d034a094fad2df31ec01debf, type: 3}
+      - {fileID: 6306193668238798680, guid: da4bcb16d034a094fad2df31ec01debf, type: 3}
+      - {fileID: -2171711528690865911, guid: da4bcb16d034a094fad2df31ec01debf, type: 3}
+      framesPerSecond: 0
+      loop: 0
+      invisible: 0
+    - name: Left
+      frames:
+      - {fileID: -3659125695609505165, guid: da4bcb16d034a094fad2df31ec01debf, type: 3}
+      - {fileID: 4305964579811112253, guid: da4bcb16d034a094fad2df31ec01debf, type: 3}
+      - {fileID: 1453526285944470465, guid: da4bcb16d034a094fad2df31ec01debf, type: 3}
+      - {fileID: -2152218590459194527, guid: da4bcb16d034a094fad2df31ec01debf, type: 3}
+      framesPerSecond: 0
+      loop: 0
+      invisible: 0
+    - name: Right
+      frames:
+      - {fileID: -95435412156437356, guid: da4bcb16d034a094fad2df31ec01debf, type: 3}
+      - {fileID: -8521881280541758710, guid: da4bcb16d034a094fad2df31ec01debf, type: 3}
+      - {fileID: -8334345858591766376, guid: da4bcb16d034a094fad2df31ec01debf, type: 3}
+      - {fileID: 549461132596107202, guid: da4bcb16d034a094fad2df31ec01debf, type: 3}
+      framesPerSecond: 0
+      loop: 0
+      invisible: 0
+    offset: {x: 0, y: 0}
+    LayerOffset: 0
+    Colourizable: 0
+    DefaultColour: {r: 1, g: 1, b: 1, a: 1}
