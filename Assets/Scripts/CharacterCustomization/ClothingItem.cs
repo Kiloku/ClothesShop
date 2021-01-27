@@ -17,4 +17,5 @@ public class ClothingItem
 
     public ClothingObject BaseObject => Category.Clothes.Find(x => x.Name == BaseName);
     public Color IconColour => BaseObject.DefaultColour;
+    
 }
