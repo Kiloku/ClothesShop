@@ -1,4 +1,5 @@
-﻿using System.Collections;
+﻿using System;
+using System.Collections;
 using System.Collections.Generic;
 using TMPro;
 using UnityEngine;
@@ -14,6 +15,10 @@ public class Shop : MonoBehaviour
     public PlayerInventory playerInventory;
 
     public TextMeshProUGUI Description;
+
+    private ClothingCategory lastCategory;
+
+    public GameObject InventoryButton;
     // Start is called before the first frame update
     void Start()
     {
@@ -22,16 +27,22 @@ public class Shop : MonoBehaviour
         {
             slot.Shop = this;
         }
+        InventoryButton.SetActive(false);
     }
 
-    // Update is called once per frame
-    void Update()
+    private void OnEnable()
     {
-        
+        SelectCategory(lastCategory);
+    }
+
+    private void OnDisable()
+    {
+        InventoryButton.SetActive(true);
     }
 
     public void SelectCategory(ClothingCategory category)
     {
+        lastCategory = category;
         List<ClothingItem> filtered = Items.FindAll(x => x.Category == category);
 
         for (int i = 0; i < ItemSlots.Count ; i++)

@@ -69,6 +69,7 @@ public class ShopSlot : MonoBehaviour
             Shop.playerInventory.money -= Item.Price;
             Shop.Items.Remove(Item);
             SetItem(null);
+            Shop.Description.text = "Thank you for your purchase!";
         }
     }
 
