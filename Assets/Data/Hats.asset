@@ -38,7 +38,7 @@ MonoBehaviour:
     offset: {x: 0, y: 0.01}
     LayerOffset: 0
     Colourizable: 0
-    DefaultColour: {r: 1, g: 1, b: 1, a: 1}
+    DefaultColour: {r: 1, g: 1, b: 1, a: 0}
   - Name: Helmet
     Animations:
     - name: Down
@@ -81,6 +81,48 @@ MonoBehaviour:
     LayerOffset: 1
     Colourizable: 0
     DefaultColour: {r: 1, g: 1, b: 1, a: 1}
+  - Name: GoldenHelmet
+    Animations:
+    - name: Down
+      frames:
+      - {fileID: 309628545801974608, guid: 9fba44479011d32499b32676c661dd93, type: 3}
+      - {fileID: -6492476722227787461, guid: 9fba44479011d32499b32676c661dd93, type: 3}
+      - {fileID: -862436429288396067, guid: 9fba44479011d32499b32676c661dd93, type: 3}
+      - {fileID: 2052024539347452602, guid: 9fba44479011d32499b32676c661dd93, type: 3}
+      framesPerSecond: 0
+      loop: 0
+      invisible: 0
+    - name: Up
+      frames:
+      - {fileID: 3077832946543437397, guid: 9fba44479011d32499b32676c661dd93, type: 3}
+      - {fileID: -1286455423214519452, guid: 9fba44479011d32499b32676c661dd93, type: 3}
+      - {fileID: 564581019204825394, guid: 9fba44479011d32499b32676c661dd93, type: 3}
+      - {fileID: -6170126940846279571, guid: 9fba44479011d32499b32676c661dd93, type: 3}
+      framesPerSecond: 0
+      loop: 0
+      invisible: 0
+    - name: Left
+      frames:
+      - {fileID: -761194614758592713, guid: 9fba44479011d32499b32676c661dd93, type: 3}
+      - {fileID: 8352561086929705713, guid: 9fba44479011d32499b32676c661dd93, type: 3}
+      - {fileID: 180330124835684876, guid: 9fba44479011d32499b32676c661dd93, type: 3}
+      - {fileID: 8815945819817097633, guid: 9fba44479011d32499b32676c661dd93, type: 3}
+      framesPerSecond: 0
+      loop: 0
+      invisible: 0
+    - name: Right
+      frames:
+      - {fileID: -22975815664129749, guid: 9fba44479011d32499b32676c661dd93, type: 3}
+      - {fileID: -6656892824112025313, guid: 9fba44479011d32499b32676c661dd93, type: 3}
+      - {fileID: 5898352447187580609, guid: 9fba44479011d32499b32676c661dd93, type: 3}
+      - {fileID: 5287830381667880429, guid: 9fba44479011d32499b32676c661dd93, type: 3}
+      framesPerSecond: 0
+      loop: 0
+      invisible: 0
+    offset: {x: 0, y: 0}
+    LayerOffset: 1
+    Colourizable: 0
+    DefaultColour: {r: 1, g: 0.666701, b: 0, a: 1}
   - Name: WitchHat
     Animations:
     - name: Down
@@ -123,3 +165,87 @@ MonoBehaviour:
     LayerOffset: 1
     Colourizable: 0
     DefaultColour: {r: 1, g: 1, b: 1, a: 1}
+  - Name: BlackWitchHat
+    Animations:
+    - name: Down
+      frames:
+      - {fileID: -5654165801028664890, guid: 7c2e7931955fa11479f11dc18b63fd08, type: 3}
+      - {fileID: 786701163776861682, guid: 7c2e7931955fa11479f11dc18b63fd08, type: 3}
+      - {fileID: 1068788386142748011, guid: 7c2e7931955fa11479f11dc18b63fd08, type: 3}
+      - {fileID: -8677497572557371847, guid: 7c2e7931955fa11479f11dc18b63fd08, type: 3}
+      framesPerSecond: 0
+      loop: 0
+      invisible: 0
+    - name: Up
+      frames:
+      - {fileID: 597482033926051198, guid: 7c2e7931955fa11479f11dc18b63fd08, type: 3}
+      - {fileID: -8810178307539851195, guid: 7c2e7931955fa11479f11dc18b63fd08, type: 3}
+      - {fileID: 3681714681965924239, guid: 7c2e7931955fa11479f11dc18b63fd08, type: 3}
+      - {fileID: 1629916442370554835, guid: 7c2e7931955fa11479f11dc18b63fd08, type: 3}
+      framesPerSecond: 0
+      loop: 0
+      invisible: 0
+    - name: Left
+      frames:
+      - {fileID: 7291205374416982725, guid: 7c2e7931955fa11479f11dc18b63fd08, type: 3}
+      - {fileID: -368459094740268163, guid: 7c2e7931955fa11479f11dc18b63fd08, type: 3}
+      - {fileID: -5759290790814217845, guid: 7c2e7931955fa11479f11dc18b63fd08, type: 3}
+      - {fileID: -1999169300946911449, guid: 7c2e7931955fa11479f11dc18b63fd08, type: 3}
+      framesPerSecond: 0
+      loop: 0
+      invisible: 0
+    - name: Right
+      frames:
+      - {fileID: -3751312668228758772, guid: 7c2e7931955fa11479f11dc18b63fd08, type: 3}
+      - {fileID: -5280089326858397028, guid: 7c2e7931955fa11479f11dc18b63fd08, type: 3}
+      - {fileID: 5079115242981502449, guid: 7c2e7931955fa11479f11dc18b63fd08, type: 3}
+      - {fileID: 3344206956069257857, guid: 7c2e7931955fa11479f11dc18b63fd08, type: 3}
+      framesPerSecond: 0
+      loop: 0
+      invisible: 0
+    offset: {x: 0, y: 0}
+    LayerOffset: 1
+    Colourizable: 0
+    DefaultColour: {r: 0.21698111, g: 0.21698111, b: 0.21698111, a: 1}
+  - Name: PurpleWitchHat
+    Animations:
+    - name: Down
+      frames:
+      - {fileID: -5654165801028664890, guid: 7c2e7931955fa11479f11dc18b63fd08, type: 3}
+      - {fileID: 786701163776861682, guid: 7c2e7931955fa11479f11dc18b63fd08, type: 3}
+      - {fileID: 1068788386142748011, guid: 7c2e7931955fa11479f11dc18b63fd08, type: 3}
+      - {fileID: -8677497572557371847, guid: 7c2e7931955fa11479f11dc18b63fd08, type: 3}
+      framesPerSecond: 0
+      loop: 0
+      invisible: 0
+    - name: Up
+      frames:
+      - {fileID: 597482033926051198, guid: 7c2e7931955fa11479f11dc18b63fd08, type: 3}
+      - {fileID: -8810178307539851195, guid: 7c2e7931955fa11479f11dc18b63fd08, type: 3}
+      - {fileID: 3681714681965924239, guid: 7c2e7931955fa11479f11dc18b63fd08, type: 3}
+      - {fileID: 1629916442370554835, guid: 7c2e7931955fa11479f11dc18b63fd08, type: 3}
+      framesPerSecond: 0
+      loop: 0
+      invisible: 0
+    - name: Left
+      frames:
+      - {fileID: 7291205374416982725, guid: 7c2e7931955fa11479f11dc18b63fd08, type: 3}
+      - {fileID: -368459094740268163, guid: 7c2e7931955fa11479f11dc18b63fd08, type: 3}
+      - {fileID: -5759290790814217845, guid: 7c2e7931955fa11479f11dc18b63fd08, type: 3}
+      - {fileID: -1999169300946911449, guid: 7c2e7931955fa11479f11dc18b63fd08, type: 3}
+      framesPerSecond: 0
+      loop: 0
+      invisible: 0
+    - name: Right
+      frames:
+      - {fileID: -3751312668228758772, guid: 7c2e7931955fa11479f11dc18b63fd08, type: 3}
+      - {fileID: -5280089326858397028, guid: 7c2e7931955fa11479f11dc18b63fd08, type: 3}
+      - {fileID: 5079115242981502449, guid: 7c2e7931955fa11479f11dc18b63fd08, type: 3}
+      - {fileID: 3344206956069257857, guid: 7c2e7931955fa11479f11dc18b63fd08, type: 3}
+      framesPerSecond: 0
+      loop: 0
+      invisible: 0
+    offset: {x: 0, y: 0}
+    LayerOffset: 1
+    Colourizable: 0
+    DefaultColour: {r: 0.37995863, g: 0, b: 1, a: 1}
