@@ -71,6 +71,10 @@ public class ShopSlot : MonoBehaviour
             SetItem(null);
             Shop.Description.text = "Thank you for your purchase!";
         }
+        else
+        {
+            Shop.Description.text = "Sorry, but that's not enough money...";
+        }
     }
 
     public void Hover()
