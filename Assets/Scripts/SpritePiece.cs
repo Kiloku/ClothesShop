@@ -59,5 +59,13 @@ public class SpritePiece : MonoBehaviour
         Animator.Refresh();
     }
     
+
+    public void SetClothes(string Name)
+    {
+        CurrentSelectedIndex = Category.Clothes.IndexOf(Category.Clothes.Find(c => c.Name == Name));
+        Init();
+        Animator.Owner.Refresh();
+        Animator.Refresh();
+    }
     
 }

@@ -1,5 +1,6 @@
 ﻿using System.Collections;
 using System.Collections.Generic;
+using System.Security.Authentication;
 using UnityEngine;
 
 public class CustomizableCharacter : MonoBehaviour
@@ -9,7 +10,9 @@ public class CustomizableCharacter : MonoBehaviour
     public SpritePiece Hat;
     public SpritePiece Pants;
     public SpritePiece Shirt;
-
+    
+    
+    public PlayerInventory Inventory;
     void Start()
     {
         SpriteRenderer = GetComponent<SpriteRenderer>();
@@ -17,17 +20,29 @@ public class CustomizableCharacter : MonoBehaviour
     
     void Update()
     {
-        if (Input.GetKeyDown(KeyCode.X))
+    }
+
+    public SpritePiece GetPieceFromCategory(ClothingCategory category)
+    {
+        if (category == Hat.Category) return Hat;
+        if (category == Pants.Category) return Pants;
+        if (category == Shirt.Category) return Shirt;
+        return null;
+    }
+
+    public void SetClothes(ClothingCategory category, string name)
+    {
+        if (category == Hat.Category)
         {
-            Pants.NextClothes();
+            Hat.SetClothes(name);
         }
-        if (Input.GetKeyDown(KeyCode.Z))
+        else if (category == Shirt.Category)
         {
-            Shirt.NextClothes();
+            Shirt.SetClothes(name);
         }
-        if (Input.GetKeyDown(KeyCode.C))
+        else if (category == Pants.Category)
         {
-            Hat.NextClothes();
+            Pants.SetClothes(name);
         }
     }
 }
