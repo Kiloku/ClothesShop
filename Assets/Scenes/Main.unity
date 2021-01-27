@@ -5540,7 +5540,7 @@ MonoBehaviour:
     Icon: {fileID: -7762960480941476576, guid: 718904d9da04f844eb37f38272177bc3, type: 3}
     IconOffset: {x: 0, y: 44}
     IconScale: 3
-    Price: 25
+    Price: 30
   - NiceName: Button-Up Shirt (Blue)
     BaseName: BlueButtonShirt
     Category: {fileID: 11400000, guid: bada53e796c1be540883e13c2d8b3d56, type: 2}
@@ -5548,7 +5548,7 @@ MonoBehaviour:
     Icon: {fileID: -7762960480941476576, guid: 718904d9da04f844eb37f38272177bc3, type: 3}
     IconOffset: {x: 0, y: 44}
     IconScale: 3
-    Price: 30
+    Price: 35
   - NiceName: Green Shirt
     BaseName: GreenShirt
     Category: {fileID: 11400000, guid: bada53e796c1be540883e13c2d8b3d56, type: 2}
@@ -5572,7 +5572,7 @@ MonoBehaviour:
     Icon: {fileID: -5654165801028664890, guid: 7c2e7931955fa11479f11dc18b63fd08, type: 3}
     IconOffset: {x: 0, y: -24}
     IconScale: 2
-    Price: 50
+    Price: 60
   - NiceName: Witch's Hat (Purple)
     BaseName: PurpleWitchHat
     Category: {fileID: 11400000, guid: 9dd424a2c671bd340a27f914dd70a7ad, type: 2}
@@ -5612,7 +5612,7 @@ MonoBehaviour:
     Icon: {fileID: 3102973179360859532, guid: d477b7880d765c748aa3b38491d03ed2, type: 3}
     IconOffset: {x: 0, y: 64}
     IconScale: 3
-    Price: 40
+    Price: 50
   - NiceName: Black Pants
     BaseName: BlackPants
     Category: {fileID: 11400000, guid: d764fcc4d6f6bf844bbb0661fa67efd8, type: 2}
@@ -5620,7 +5620,7 @@ MonoBehaviour:
     Icon: {fileID: 3102973179360859532, guid: d477b7880d765c748aa3b38491d03ed2, type: 3}
     IconOffset: {x: 0, y: 64}
     IconScale: 3
-    Price: 50
+    Price: 60
   - NiceName: Pink Skirt
     BaseName: PinkSkirt
     Category: {fileID: 11400000, guid: d764fcc4d6f6bf844bbb0661fa67efd8, type: 2}
@@ -5636,7 +5636,7 @@ MonoBehaviour:
     Icon: {fileID: 1530105913813767182, guid: da4bcb16d034a094fad2df31ec01debf, type: 3}
     IconOffset: {x: 0, y: 64}
     IconScale: 3
-    Price: 30
+    Price: 40
   - NiceName: Black Skirt
     BaseName: BlackSkirt
     Category: {fileID: 11400000, guid: d764fcc4d6f6bf844bbb0661fa67efd8, type: 2}
@@ -5644,7 +5644,7 @@ MonoBehaviour:
     Icon: {fileID: 1530105913813767182, guid: da4bcb16d034a094fad2df31ec01debf, type: 3}
     IconOffset: {x: 0, y: 64}
     IconScale: 3
-    Price: 50
+    Price: 60
   ItemSlots:
   - {fileID: 118833743268309971}
   - {fileID: 646220461}
